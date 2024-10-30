@@ -1,0 +1,11 @@
+.bpf-content--format-audio audio {
+  display: block;
+  width: 100%;
+}
+
+.bpf-content--format-audio .bpf-content__image {
+  display: block;
+  width: 100%;
+}
+
+/*# sourceMappingURL=audio-frontend.css.map */

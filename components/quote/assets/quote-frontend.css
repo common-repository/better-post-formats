@@ -1,0 +1,65 @@
+@charset "UTF-8";
+.bpf-content--format-quote {
+  background-color: #cdcdcd;
+  background-position: center;
+  background-size: cover;
+}
+
+.bpf-content--format-quote .bpf-content__grid {
+  padding: 2.5em 2.5em 2.5em calc(1em * 2 + 40px);
+}
+
+.bpf-content--format-quote .bpf-content__icon:after {
+  content: "";
+  font-family: dashicons;
+  font-size: 40px;
+  font-weight: 400;
+  height: 40px;
+  line-height: 100%;
+  right: 0;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  width: 40px;
+}
+
+.bpf-content__permalink:hover ~ .bpf-content__quote {
+  color: #808080 !important;
+}
+
+.bpf-content__quote {
+  border: 0 !important;
+  color: inherit !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  transition: color 0.3s ease-in-out;
+}
+
+.bpf-content__quote:before, .bpf-content__quote:after {
+  display: none !important;
+}
+
+.bpf-content__quote-text {
+  border: 0 !important;
+  color: inherit !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.bpf-content__quote-text:before, .bpf-content__quote-text:after {
+  display: none !important;
+}
+
+.bpf-content__quote-author {
+  border: 0 !important;
+  color: inherit !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.bpf-content__quote-author:before, .bpf-content__quote-author:after {
+  display: none !important;
+}
+
+/*# sourceMappingURL=quote-frontend.css.map */

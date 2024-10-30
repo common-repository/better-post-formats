@@ -1,0 +1,60 @@
+.bpf-control {
+  margin: 12px 0 0 0;
+}
+
+.bpf-control__text, .bpf-control__textarea, .bpf-control__select {
+  margin: 0 0 12px 0;
+}
+
+.bpf-control__text-field, .bpf-control__textarea-field, .bpf-control__select-field {
+  box-sizing: border-box;
+  margin: 0;
+  width: 100%;
+}
+
+.bpf-control__label {
+  margin: 0 0 6px 0;
+  display: block;
+  width: 100%;
+}
+
+.bpf-control--no-bottom-margin {
+  margin-bottom: 0;
+}
+
+.wp-list-table.posts .row-title:before {
+  color: currentColor;
+  display: inline-block;
+  font-family: dashicons;
+  font-size: 20px;
+  font-weight: 400;
+  height: 20px;
+  line-height: 1em;
+  margin-right: 7px;
+  opacity: 0.3;
+  position: relative;
+  top: 4px;
+  width: 20px;
+}
+
+.wp-list-table.posts .format-audio .row-title:before {
+  content: '\f127';
+}
+
+.wp-list-table.posts .format-gallery .row-title:before {
+  content: '\f161';
+}
+
+.wp-list-table.posts .format-link .row-title:before {
+  content: '\f103';
+}
+
+.wp-list-table.posts .format-quote .row-title:before {
+  content: '\f122';
+}
+
+.wp-list-table.posts .format-video .row-title:before {
+  content: '\f126';
+}
+
+/*# sourceMappingURL=common-backend.css.map */

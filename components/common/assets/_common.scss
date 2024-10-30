@@ -1,0 +1,96 @@
+// backend variables
+$backend-transition-timing: 0.15s;
+$backend-transition-easing: ease-in-out;
+$backend-opacity-transition: opacity $backend-transition-timing $backend-transition-easing;
+
+$backend-distance: 12px;
+$backend-distance--large: $backend-distance;
+$backend-distance--small: $backend-distance--large / 2;
+
+$backend-color--light: #ffffff;
+
+$backend-icon: 20px;
+$backend-icon-inner: $backend-icon - 2;
+$backend-icon-offset: 3px;
+
+// frontend variables
+$frontend-transition-timing: 0.3s;
+$frontend-transition-easing: ease-in-out;
+$frontend-opacity-transition: opacity 1s $frontend-transition-easing; // hardcode timing, for gallery transitions only
+$frontend-color-transition: color $frontend-transition-timing $frontend-transition-easing;
+$frontend-background-color-transition: background-color $frontend-transition-timing $frontend-transition-easing;
+
+$frontend-color--light: #ffffff;
+$frontend-color--medium: #808080;
+$frontend-color--dark: #000000;
+
+$frontend-arrow-size: 40px;
+$frontend-bullet-size: 10px;
+$frontend-icon-size: 40px;
+$frontend-icon-distance: 1em;
+
+$frontend-link-quote-distance: 2.5em;
+
+// mixins
+@mixin bpfClearfix() {
+	&:after {
+		clear: both;
+		content: '';
+		display: table;
+	}
+}
+
+@mixin bpfDisplayBlock($width:100%,$important:null) {
+	display: block $important;
+	width: $width;
+}
+
+@mixin bpfPositionAbsolute($height,$width) {
+	height: $height;
+	position: absolute;
+	width: $width;
+}
+
+@mixin bpfBackgroundStyle() {
+	background-color: lighten($frontend-color--medium, 30);
+	background-position: center;
+	background-size: cover;
+}
+
+@mixin bpfIcon($content,$size) {
+	content: $content;
+	font-family: dashicons;
+	font-size: $size;
+	font-weight: 400;
+	height: $size;
+	line-height: 100%;
+	right: 0;
+	top: 0;
+	width: $size;
+
+	@include bpfPositionAbsolute($size, $size);
+}
+
+@mixin bpfResetText() {
+	border: 0 !important;
+	color: inherit !important;
+	margin: 0 !important;
+	padding: 0 !important;
+
+	&:before,
+	&:after {
+		display: none !important;
+	}
+}
+
+@mixin bpfClearForeignContent() {
+	.bpf-content {
+
+		* {
+
+			&:not([class*="bpf-content"]) {
+				display: none;
+			}
+		}
+	}
+}

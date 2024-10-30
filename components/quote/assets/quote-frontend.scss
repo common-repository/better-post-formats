@@ -1,0 +1,47 @@
+// import mixins and variables
+@import '../../common/assets/_common.scss';
+
+.bpf-content {
+
+	&--format-quote {
+		@include bpfBackgroundStyle();
+
+		.bpf-content {
+
+			&__grid {
+				padding: $frontend-link-quote-distance $frontend-link-quote-distance $frontend-link-quote-distance calc(#{$frontend-icon-distance} * 2 + #{$frontend-icon-size});
+			}
+
+			&__icon {
+
+				&:after {
+					@include bpfIcon('\f122', $frontend-icon-size);
+				}
+			}
+		}
+	}
+
+	&__permalink {
+
+		&:hover {
+
+			~ .bpf-content__quote {
+				color: $frontend-color--medium !important;
+			}
+		}
+	}
+
+	&__quote {
+		@include bpfResetText();
+
+		transition: $frontend-color-transition;
+
+		&-text {
+			@include bpfResetText();
+		}
+
+		&-author {
+			@include bpfResetText();
+		}
+	}
+}

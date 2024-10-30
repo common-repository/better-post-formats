@@ -1,0 +1,69 @@
+.bpf-hide-default-title .entry-title {
+  display: none;
+}
+
+body .bpf-content *:not([class*="bpf-content"]) {
+  display: none;
+}
+
+.bpf-content {
+  position: relative;
+}
+
+.bpf-content--light {
+  color: #ffffff;
+}
+
+.bpf-content--dark {
+  color: #000000;
+}
+
+.bpf-content iframe {
+  display: block !important;
+  width: 100%;
+  margin: 0;
+  background-color: #000000;
+}
+
+.bpf-content__grid {
+  margin: 0 auto;
+  max-width: 100%;
+  position: relative;
+}
+
+.bpf-content__permalink {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 10;
+}
+
+.bpf-content__title {
+  border: 0 !important;
+  color: inherit !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.bpf-content__title:before, .bpf-content__title:after {
+  display: none !important;
+}
+
+.bpf-content__icon {
+  height: 40px;
+  position: absolute;
+  width: 40px;
+  left: 1em;
+  text-align: center;
+  top: 2.5em;
+  z-index: 20;
+}
+
+.bpf-content__icon:after {
+  display: block;
+  width: 40px;
+}
+
+/*# sourceMappingURL=common-frontend.css.map */

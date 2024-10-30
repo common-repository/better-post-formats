@@ -1,0 +1,63 @@
+// import mixins and variables
+@import '../../common/assets/common.scss';
+
+.bpf-hide-default-title {
+
+	.entry-title {
+		display: none;
+	}
+}
+
+body {
+	@include bpfClearForeignContent();
+}
+
+.bpf-content {
+	position: relative;
+
+	&--light {
+		color: $frontend-color--light;
+	}
+
+	&--dark {
+		color: $frontend-color--dark;
+	}
+
+	iframe {
+		@include bpfDisplayBlock(100%, !important);
+
+		margin: 0;
+		background-color: $frontend-color--dark;
+	}
+
+	&__grid {
+		margin: 0 auto;
+		max-width: 100%;
+		position: relative;
+	}
+
+	&__permalink {
+		@include bpfPositionAbsolute(100%, 100%);
+
+		left: 0;
+		top: 0;
+		z-index: 10;
+	}
+
+	&__title {
+		@include bpfResetText();
+	}
+
+	&__icon {
+		@include bpfPositionAbsolute($frontend-icon-size, $frontend-icon-size);
+
+		left: $frontend-icon-distance;
+		text-align: center;
+		top: $frontend-link-quote-distance;
+		z-index: 20;
+
+		&:after {
+			@include bpfDisplayBlock($frontend-icon-size);
+		}
+	}
+}
